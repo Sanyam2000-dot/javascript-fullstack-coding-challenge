@@ -1,5 +1,6 @@
 import { TaskModel } from '../../models/TaskModel'
 import { wait } from '../../utils'
+import { ToggleTaskInput } from "../../schemaTypes";
 
 let TASKS_LIST: TaskModel[] = [
   {
@@ -93,7 +94,17 @@ export class TasksData {
     return wait(500).then(() => this.tasks)
   }
 
-  async toggleTask(): Promise<boolean> {
-    return Promise.resolve(true) 
+  async toggleTask(_toggleTaskInput: ToggleTaskInput): Promise<boolean> {
+    TASKS_LIST = this.tasks.map((task: TaskModel) =>
+      task.id === _toggleTaskInput.taskId
+        ? {
+            ...task,
+            completedAt: task.completedAt
+              ? null
+              : new Date().toISOString().substring(0, 10)
+          }
+        : task
+    );
+    return wait(500).then(() => true);
   }
 }

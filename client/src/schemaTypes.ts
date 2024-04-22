@@ -11,6 +11,16 @@ export type Scalars = {
   Float: number;
 };
 
+export type Mutation = {
+  __typename?: 'Mutation';
+  toggleTask: Scalars['Boolean'];
+};
+
+
+export type MutationToggleTaskArgs = {
+  toggleTaskInput: ToggleTaskInput;
+};
+
 export type Query = {
   __typename?: 'Query';
   tasks: Array<Task>;
@@ -22,5 +32,10 @@ export type Task = {
   group: Scalars['String'];
   task: Scalars['String'];
   dependencyIds: Array<Maybe<Scalars['Int']>>;
+  completedAt?: Maybe<Scalars['String']>;
+};
+
+export type ToggleTaskInput = {
+  taskId: Scalars['Int'];
   completedAt?: Maybe<Scalars['String']>;
 };

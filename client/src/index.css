@@ -1,6 +1,119 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+}
+
+#loading {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+#top-items {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#top-items #top-title {
+  font-size: 20px;
+  margin: 20px;
+}
+
+#top-items #top-return {
+  font-size: 13px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #5793dd;
+  margin-top: 29px;
+}
+
+#top-items #top-return:hover {
+  text-decoration: underline;
+}
+
+.task-card:hover {
+  cursor: pointer;
+  background-color: #f4f4f4;
+}
+
+.task-card:hover {
+  cursor: pointer;
+  background-color: #f4f4f4;
+}
+
+.task-card {
+  height: 90px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #dfdfdf;
+  display: flex;
+}
+
+.task-card:last-child {
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.task-icon {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  margin-left: 22px;
+}
+
+.task-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-group-title {
+  font-weight: bold;
+  color: #282828;
+}
+
+.task-group-title.task-status-locked {
+  color: #898989;
+}
+
+.task-group-title.task-status-completed {
+  text-decoration: line-through;
+}
+
+.task-group-subtitle {
+  text-transform: uppercase;
+  color: #6e6e6e;
+  font-size: 14px;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+}
+
+.icon.icon-group {
+  background-image: url("./images/group.svg");
+  width: 12px;
+  height: 12px;
+}
+
+.icon.icon-completed {
+  background-image: url("./images/completed.svg");
+}
+
+.icon.icon-incomplete {
+  background-image: url("./images/incomplete.svg");
+}
+
+.icon.icon-locked {
+  background-image: url("./images/locked.svg");
 }

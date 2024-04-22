@@ -1,0 +1,3 @@
+mutation ToggleTask($toggleTaskToggleTaskInput: ToggleTaskInput!) {
+  toggleTask(toggleTaskInput: $toggleTaskToggleTaskInput)
+}
